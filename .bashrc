@@ -8,8 +8,8 @@ alias rl="root -l"
 alias rlb="root -l -b"
 alias rlbq="root -l -b -q"
 
-alias sshRCF="ssh -X zamiller@rssh.rhic.bnl.gov"
-alias sshPDSF="ssh -X zamiller@pdsf.nersc.gov"
+alias sshRCF="ssh -Y zamiller@rssh.rhic.bnl.gov"
+alias sshPDSF="ssh -Y zamiller@pdsf.nersc.gov"
 
 export PS1="\u@\h\w$ "
 
