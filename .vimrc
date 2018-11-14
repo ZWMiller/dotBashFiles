@@ -1,5 +1,6 @@
 """"" Set Color Scheme (~/.vim/colors)
-colo zachVimColorsSSH
+set termguicolors
+colorscheme zachVimColorsSSH
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle
@@ -28,7 +29,6 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'sjl/gundo.vim'
 Plugin 'jQuery'
@@ -50,6 +50,8 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-jdaddy'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'morhetz/gruvbox'
 call vundle#end() 
 
 """"" Text Formatting
@@ -184,3 +186,12 @@ nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 
 "" Add search and replace current word
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
+set swapfile
+set dir=~/vim_swaps
+
+"" Highlight Self in python
+augroup PythonCustomization
+  " highlight python self, when followed by a comma, a period or a parenth
+   :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
+augroup END
