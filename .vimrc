@@ -187,8 +187,8 @@ nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 "" Add search and replace current word
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-set swapfile
-set dir=~/vim_swaps
+set directory=$HOME/.vim/swap//
+set backupdir=$HOME/.vim/backups//
 
 "" Highlight Self in python
 augroup PythonCustomization
